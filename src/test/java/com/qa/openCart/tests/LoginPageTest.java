@@ -28,12 +28,12 @@ import io.qameta.allure.TmsLink;
 @Listeners({ExtendReportListener.class, TestAllureListener.class})
 public class LoginPageTest extends BaseTest {
 	
-	@Description("Checking login page title...") //imp
+	@Description("Checking login page title..") //imp
 	@Severity(SeverityLevel.MINOR) //imp
 	@Feature("login page title features") // imp
 	@Owner("Shubbham Adsod")
-	@Issue("Bug-200")
-	@TmsLink("wwww.teams")
+	@Issue("Bug-201")
+	@TmsLink("wwww.teams.com")
 	@Link("www.opencart.com")
 	@Test(priority = 1)
 	public void loginPageTitleTest() {

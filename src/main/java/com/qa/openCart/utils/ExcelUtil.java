@@ -9,9 +9,11 @@ import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
 
+import com.qa.openCart.constants.AppConstants;
+
 public class ExcelUtil {
 	
-	private static final String TEST_DATA_SHEET_PATH = "./src/test/resourcess/testdata/OpenCartRegTestData.xlsx";
+	//private static final String TEST_DATA_SHEET_PATH = "./src/test/resources/testdata/OpenCartRegTestData.xlsx";
 	private static Workbook book;
 	private static Sheet sheet;
 	
@@ -21,7 +23,7 @@ public class ExcelUtil {
 		
 		
 		try {
-			FileInputStream file = new FileInputStream(TEST_DATA_SHEET_PATH);
+			FileInputStream file = new FileInputStream(AppConstants.TEST_DATA_SHEET_PATH);
 			book = WorkbookFactory.create(file);
 			sheet = book.getSheet(sheetName.trim());
 		

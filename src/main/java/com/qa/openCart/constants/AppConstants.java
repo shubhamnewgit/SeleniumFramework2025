@@ -5,11 +5,12 @@ import java.util.List;
 
 public class AppConstants {
 	
-	public static final String CONFIG_FILE_PATH = "./src/test/resourcess/config/config.properties";
-	public static final String CONFIG_QA_FILE_PATH = "./src/test/resourcess/config/qa.properties";
-	public static final String CONFIG_DEV_FILE_PATH = "./src/test/resourcess/config/dev.properties";
-	public static final String CONFIG_UAT_FILE_PATH = "./src/test/resourcess/config/uat.properties";
-	public static final String CONFIG_STAGE_FILE_PATH = "./src/test/resourcess/config/stage.properties";
+	public static final String CONFIG_FILE_PATH = "./src/test/resources/config/config.properties";
+	public static final String CONFIG_QA_FILE_PATH = "./src/test/resources/config/qa.properties";
+	public static final String CONFIG_DEV_FILE_PATH = "./src/test/resources/config/dev.properties";
+	public static final String CONFIG_UAT_FILE_PATH = "./src/test/resources/config/uat.properties";
+	public static final String CONFIG_STAGE_FILE_PATH = "./src/test/resources/config/stage.properties";
+	public static final String TEST_DATA_SHEET_PATH = "./src/test/resources/testdata/OpenCartRegTestData.xlsx";
 	
 	
 	public static final String LOGIN_PAGE_TITLE = "Account Login";

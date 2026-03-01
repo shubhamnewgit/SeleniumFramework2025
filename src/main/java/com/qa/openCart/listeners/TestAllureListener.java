@@ -20,9 +20,9 @@ public class TestAllureListener implements ITestListener {
 	// Text attachments for Allure
 	@Attachment(value = "Page screenshot", type = "image/png")
 	public byte[] saveScreenshotPNG(WebDriver driver) {
-		return ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+		return ((TakesScreenshot) DriverFactory.getDriver()).getScreenshotAs(OutputType.BYTES);
 	}
-
+	
 	// Text attachments for Allure
 	@Attachment(value = "{0}", type = "text/plain")
 	public static String saveTextLog(String message) {
@@ -69,6 +69,7 @@ public class TestAllureListener implements ITestListener {
 		// Save a log on allure.
 		saveTextLog(getTestMethodName(iTestResult) + " failed and screenshot taken!");		
 	}
+	
 
 	@Override
 	public void onTestSkipped(ITestResult iTestResult) {

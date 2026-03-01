@@ -135,7 +135,7 @@
 				<configuration>
 					<suiteXmlFiles>
 						<suiteXmlFile>
-							src/test/resources/testrunner/test_regression.xml</suiteXmlFile>
+							src/test/resources/testrunner/login_page.xml</suiteXmlFile>
 					</suiteXmlFiles>
 
 					<argLine>

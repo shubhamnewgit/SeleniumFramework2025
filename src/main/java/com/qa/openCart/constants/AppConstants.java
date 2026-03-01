@@ -13,7 +13,7 @@ public class AppConstants {
 	public static final String TEST_DATA_SHEET_PATH = "./src/test/resources/testdata/OpenCartRegTestData.xlsx";
 	
 	
-	public static final String LOGIN_PAGE_TITLE = "Account Login";
+	public static final String LOGIN_PAGE_TITLE = "Account Login11";
 	public static final String LOGIN_PAGE_FRACTION_URL = "route=account/login";
 	
 	

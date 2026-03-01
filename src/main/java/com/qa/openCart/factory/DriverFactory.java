@@ -156,24 +156,51 @@ public class DriverFactory {
 //		return prop;
 	}
 	
+	//screen shot method
+//	public static  String getScreenshot(String methodName) {
+//		
+//		File srcFile = ((TakesScreenshot)getDriver()).getScreenshotAs(OutputType.FILE);
+//		
+//		String path = System.getProperty("user.dir")+"/screenshots/"+methodName+"_"+System.currentTimeMillis()+".png";
+//		
+//		File destination = new File(path);
+//		
+//		//srcFile.renameTo(destination);
+//		//Or
+//		try {
+//			org.openqa.selenium.io.FileHandler.copy(srcFile, destination);
+//		} catch (IOException e) {
+//			e.printStackTrace();
+//		}
+//		
+//		return path;
+//	}
 	
-	public static  String getScreenshot(String methodName) {
-		
-		File srcFile = ((TakesScreenshot)getDriver()).getScreenshotAs(OutputType.FILE);
-		
-		String path = System.getProperty("user.dir")+"/screenshots/"+methodName+"_"+System.currentTimeMillis()+",png";
-		
-		File destination = new File(path);
-		
-		//srcFile.renameTo(destination);
-		//Or
-		try {
-			org.openqa.selenium.io.FileHandler.copy(srcFile, destination);
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		
-		return path;
+	
+	//OR this method generte screenshot folder automaticall if not avalable
+	
+	public static String getScreenshot(String methodName) {
+
+	    File src = ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.FILE);
+
+	    String path = System.getProperty("user.dir") 
+	            + "/screenshots/" 
+	            + methodName + "_" 
+	            + System.currentTimeMillis() + ".png";
+
+	    File folder = new File(System.getProperty("user.dir") + "/screenshots");
+
+	    if (!folder.exists()) {
+	        folder.mkdir();   // create folder if not present
+	    }
+
+	    try {
+	    	org.openqa.selenium.io.FileHandler.copy(src, new File(path));
+	    } catch (IOException e) {
+	        e.printStackTrace();
+	    }
+
+	    return path;
 	}
 	
 	
